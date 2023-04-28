@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Join the Hive</title>
+  <style>
+    body {
+      font-family: 'Arial Narrow', Arial, sans-serif;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    legend {
+      background-color: #ff8902;
+      border-radius: 5px;
+      color: rgb(10, 10, 10);
+      padding: 12px;
+
+    }
+
+    fieldset {
+      background-color: #442c4e;
+      border: 5px solid #7300ff;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      width: 720px;
+      color: #FFFFFF
+    }
+
+    div {
+      margin: 10px;
+    }
+
+    label {
+      display: inline-block;
+      text-align: right;
+      vertical-align: top;
+      width: 200px;
+    }
+
+    input[type="radio"]+label,
+    input[type="checkbox"]+label {
+      width: auto;
+    }
+
+    .range-caption {
+      background-color: #ff0000;
+      color: white;
+      padding: 6px;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      background-color: rgb(75, 14, 121);
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      padding: 12px;
+    }
+
+    div:hover {
+      color: #fd8300;
+    }
+
+    .csv-preview {
+      border-collapse: collapse;
+      width: auto;
+    }
+
+    .csv-preview th,
+    .csv-preview td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+      width: inherit;
+    }
+
+    .csv-preview th {
+      background-color: #2157F6;
+      font-weight: bold;
+    }
+
+    .submit {
+      text-align: right;
+      background-color: #7300ff;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="banner2.png" width="800" alt="title-of-form">
+  <form id="myForm" action="https://hooks.zapier.com/hooks/catch/15089026/3uzcczp/" method="POST"
+    enctype="application/x-www-form-urlencoded">
+    <fieldset>
+      <legend>Campaign Requested By</legend>
+      <div>
+        <label for="first-name">Recruiter First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="your first name" required>
+      </div>
+      <div>
+        <label for="last-name">Recruiter Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="your last name" required>
+      </div>
+      <div>
+        <label for="email">Recruiter Email</label>
+        <input type="email" id="email" name="email" placeholder="you@domain.com" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Campaign Data</legend>
+      <div>
+        <label for="name-of-campaign">Name of Campaign</label>
+        <input type="text" id="name-of-campaign" name="name-of-campaign"
+          placeholder="IE: RN/LPN Opporunities in Texas for Corrections" required>
+      </div>
+      <div>
+        <label for="job-type" id="job-type">Job Type</label>
+        <select>
+          <option value="travel">Travel</option>
+          <option value="contract_local">Local Contract</option>
+          <option value="per-diem">Per-Diem</option>
+          <option value="any-of-the-above">Any of the Above</option>
+        </select>
+      </div>
+      <div>
+        <label for="campaign-type" id="campaign-type">Campaign Type</label>
+        <select>
+          <option value="local_regional_west_coast">Local/Regional: West Coast</option>
+          <option value="local_regional_central">Local/Regional: Central/Eastern</option>
+          <option value="national">National Campaign</option>
+        </select>
+      </div>
+      <div>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Salt Lake City" required>
+      </div>
+      <div>
+        <label for="state">Which State is this For?</label>
+        <select id="state" name="state">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+          <option value="AS">American Samoa</option>
+          <option value="GU">Guam</option>
+          <option value="MP">Northern Mariana Islands</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="UM">U.S. Minor Outlying Islands</option>
+          <option value="VI">U.S. Virgin Islands</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Clinician Information</legend>
+      <div>
+        <label for="desired-profession">Desired Profession:</label>
+        <select id="desired-profession" name="desired-profession[]" multiple>
+          <option value="RN">RN</option>
+          <option value="LPN/LVN">LPN/LVN</option>
+          <option value="CNA/MA">CNA/MA</option>
+          <option value="other">Other Allied Health Professional</option>
+        </select>
+      </div>
+      <div id="other-profession-field" style="display:none;">
+        <label for="other-profession">Other Profession:</label>
+        <input type="text" id="other-profession" name="other-profession">
+        <p>Hold down the Ctrl (Cmd on Mac) key to select multiple options.</p>
+      </div>
+      <div>
+        <label for="specialty">Specialty:</label>
+        <select id="specialty" name="specialty">
+          <option value="Acute Care">Acute Care</option>
+          <option value="Ambulatory Care">Ambulatory Care</option>
+          <option value="Anesthesia Tech">Anesthesia Tech</option>
+          <option value="Assistant Manager">Assistant Manager</option>
+          <option value="Behavioral Health Tech">Behavioral Health Tech</option>
+          <option value="Bone Marrow Transplant">Bone Marrow Transplant</option>
+          <option value="Burn ICU">Burn ICU</option>
+          <option value="Burn MedSurg">Burn MedSurg</option>
+          <option value="Burn OR">Burn OR</option>
+          <option value="Cardiac">Cardiac</option>
+          <option value="Cardiac ICU">Cardiac ICU</option>
+          <option value="Cardiac IMU">Cardiac IMU</option>
+          <option value="Cardiac Surgery ICU">Cardiac Surgery ICU</option>
+          <option value="Cardiac Tele">Cardiac Tele</option>
+          <option value="Case Management">Case Management</option>
+          <option value="Case Manager">Case Manager</option>
+          <option value="Cat Scan Tech">Cat Scan Tech</option>
+          <option value="Cath Lab">Cath Lab</option>
+          <option value="Cath Lab Tech">Cath Lab Tech</option>
+          <option value="CCU">CCU</option>
+          <option value="CDU">CDU</option>
+          <option value="Certified Anesthesia Tech">Certified Anesthesia Tech</option>
+          <option value="Certified Hemo Dialysis Tech">Certified Hemo Dialysis Tech</option>
+          <option value="Certified Nurse Midwife">Certified Nurse Midwife</option>
+          <option value="Certified Respiratory Therapist">Certified Respiratory Therapist</option>
+          <option value="Certified Surgical Tech">Certified Surgical Tech</option>
+          <option value="Charge">Charge</option>
+          <option value="Clinic">Clinic</option>
+          <option value="Clinic/Ambulatory">Clinic/Ambulatory</option>
+          <option value="Clinical Lab Scientist">Clinical Lab Scientist</option>
+          <option value="CNA">CNA</option>
+          <option value="Corrections">Corrections</option>
+          <option value="COTA">COTA</option>
+          <option value="CRU">CRU</option>
+          <option value="CT Tech">CT Tech</option>
+          <option value="CV Tech">CV Tech</option>
+          <option value="CVICU">CVICU</option>
+          <option value="CVOR">CVOR</option>
+          <option value="CVOR Surg Tech">CVOR Surg Tech</option>
+          <option value="CVPCU">CVPCU</option>
+          <option value="Diabetics">Diabetics</option>
+          <option value="Dialysis">Dialysis</option>
+          <option value="Dialysis Tech">Dialysis Tech</option>
+          <option value="Dosimetrist">Dosimetrist</option>
+          <option value="Echo Lab">Echo Lab</option>
+          <option value="Echo Tech">Echo Tech</option>
+          <option value="Education">Education</option>
+          <option value="EEG Tech">EEG Tech</option>
+          <option value="EKG Tech">EKG Tech</option>
+          <option value="Emergency Room">Emergency Room</option>
+          <option value="Employee Health">Employee Health</option>
+          <option value="EMT">EMT</option>
+          <option value="Endo">Endo</option>
+          <option value="Endo Tech">Endo Tech</option>
+          <option value="EP Tech">EP Tech</option>
+          <option value="ER Tech">ER Tech</option>
+          <option value="First Assist - RN">First Assist - RN</option>
+          <option value="First Assist - Surg Tech">First Assist - Surg Tech</option>
+          <option value="Float Pool">Float Pool</option>
+          <option value="Geriatrics">Geriatrics</option>
+          <option value="GI Lab">GI Lab</option>
+          <option value="GI Tech">GI Tech</option>
+          <option value="Heart Lab">Heart Lab</option>
+          <option value="Histo Tech">Histo Tech</option>
+          <option value="Home Health">Home Health</option>
+          <option value="Hospice">Hospice</option>
+          <option value="Hospice and Palliative">Hospice and Palliative</option>
+          <option value="House Supervisor">House Supervisor</option>
+          <option value="ICU">ICU</option>
+          <option value="IMC">IMC</option>
+          <option value="IMCU">IMCU</option>
+          <option value="Immunization Nurse">Immunization Nurse</option>
+          <option value="Infection Prevention">Infection Prevention</option>
+          <option value="Infusion">Infusion</option>
+          <option value="Internal Medicine">Internal Medicine</option>
+          <option value="Interventional Radiology">Interventional Radiology</option>
+          <option value="IR">IR</option>
+          <option value="IR Tech">IR Tech</option>
+          <option value="L&D">L&D</option>
+          <option value="Lab Tech">Lab Tech</option>
+          <option value="LPN/LVN">LPN/LVN</option>
+          <option value="LTAC">LTAC</option>
+          <option value="LTC">LTC</option>
+          <option value="Mammo Tech">Mammo Tech</option>
+          <option value="Med Lab Tech">Med Lab Tech</option>
+          <option value="Med Tech">Med Tech</option>
+          <option value="Medical Assistant">Medical Assistant</option>
+          <option value="Medical ICU">Medical ICU</option>
+          <option value="Medication Aid">Medication Aid</option>
+          <option value="MedSurg">MedSurg</option>
+          <option value="MedSurg Neuro">MedSurg Neuro</option>
+          <option value="MedSurg Ortho">MedSurg Ortho</option>
+          <option value="MedSurg/Tele">MedSurg/Tele</option>
+          <option value="Monitor Tech">Monitor Tech</option>
+          <option value="Mother Baby/Post Partum">Mother Baby/Post Partum</option>
+          <option value="MRI Tech">MRI Tech</option>
+          <option value="MSICU">MSICU</option>
+          <option value="MSW - Social Work">MSW - Social Work</option>
+          <option value="Neuro">Neuro</option>
+          <option value="Neuro ICU">Neuro ICU</option>
+          <option value="Neuro Ortho">Neuro Ortho</option>
+          <option value="Neuro Traum ICU">Neuro Traum ICU</option>
+          <option value="Neurology">Neurology</option>
+          <option value="Newborn Nursery">Newborn Nursery</option>
+          <option value="NICU">NICU</option>
+          <option value="Nuclear Med Tech">Nuclear Med Tech</option>
+          <option value="Observation">Observation</option>
+          <option value="Oncology">Oncology</option>
+          <option value="OR">OR</option>
+          <option value="OT">OT</option>
+          <option value="Outpatient">Outpatient</option>
+          <option value="PACU">PACU</option>
+          <option value="PCU">PCU</option>
+          <option value="PCVICU">PCVICU</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="Peds CVOR">Peds CVOR</option>
+          <option value="Peds ER">Peds ER</option>
+          <option value="PEDS OR">PEDS OR</option>
+          <option value="Perinatal">Perinatal</option>
+          <option value="Pharm Tech">Pharm Tech</option>
+          <option value="Pharmacist">Pharmacist</option>
+          <option value="Phlebotomist">Phlebotomist</option>
+          <option value="PICC">PICC</option>
+          <option value="PICU">PICU</option>
+          <option value="Post Partum">Post Partum</option>
+          <option value="Pre Op">Pre Op</option>
+          <option value="Psych">Psych</option>
+          <option value="Psych Tech">Psych Tech</option>
+          <option value="PT">PT</option>
+          <option value="PTA">PTA</option>
+          <option value="Pulmonary">Pulmonary</option>
+          <option value="Rad Tech">Rad Tech</option>
+          <option value="Radiation Therapist">Radiation Therapist</option>
+          <option value="Radiology">Radiology</option>
+          <option value="Recovery">Recovery</option>
+          <option value="Recreational Therapists">Recreational Therapists</option>
+          <option value="Rehab">Rehab</option>
+          <option value="Renal">Renal</option>
+          <option value="RRT">RRT</option>
+          <option value="Schools">Schools</option>
+          <option value="Short Stay Unit">Short Stay Unit</option>
+          <option value="SICU">SICU</option>
+          <option value="Sitter">Sitter</option>
+          <option value="SLP">SLP</option>
+          <option value="SNF">SNF</option>
+          <option value="Social Worker">Social Worker</option>
+          <option value="Sonographer">Sonographer</option>
+          <option value="Special Care Unit">Special Care Unit</option>
+          <option value="Special Procedures Tech">Special Procedures Tech</option>
+          <option value="Sterile Processor">Sterile Processor</option>
+          <option value="Stroke">Stroke</option>
+          <option value="Surgical Tech">Surgical Tech</option>
+          <option value="Technician (Other)">Technician (Other)</option>
+          <option value="Tele">Tele</option>
+          <option value="Transitional Care">Transitional Care</option>
+          <option value="Transplant">Transplant</option>
+          <option value="Trauma">Trauma</option>
+          <option value="Trauma ICU">Trauma ICU</option>
+          <option value="Trauma Tele">Trauma Tele</option>
+          <option value="Ultrasound Tech">Ultrasound Tech</option>
+          <option value="Urgent Care">Urgent Care</option>
+          <option value="Urology">Urology</option>
+          <option value="Utilization Review">Utilization Review</option>
+          <option value="Vascular Tech">Vascular Tech</option>
+          <option value="Women's Health">Women's Health</option>
+          <option value="Wound Care">Wound Care</option>
+          <option value="X-Ray Tech">X-Ray Tech</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Pay Information</legend>
+      <label for="max-stipend-rate">What's the Max Stipend Rate?</label>
+      <input type="text" id="max-stipend-rate" name="max-stipend-rate" pattern="^\$?[\d,]+(\.\d{0,2})?$"
+        title="Please enter a valid dollar amount.">
+      <label for="pay-per-stipend">Pay Per</label>
+      <select id="pay-per-stipend" name="pay-per-stipend">
+        <option value="week">Week</option>
+        <option value="bi-weekly">Bi-Weekly</option>
+        <option value="month">Month</option>
+        <option value="contract-period">Contract Period</option>
+      </select>
+      <label for="max-hourly-rate">What's the Max Hourly Rate?</label>
+      <input type="text" id="max-hourly-rate" name="max-hourly-rate" pattern="^\$?[\d,]+(\.\d{0,2})?$"
+        title="Please enter a valid dollar amount.">
+      <label for="pay-per-hourly">Pay Per</label>
+      <select id="pay-per-hourly" name="pay-per-hourly">
+        <option value="week">Week</option>
+        <option value="bi-weekly">Bi-Weekly</option>
+        <option value="month">Month</option>
+        <option value="contract-period">Contract Period</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>File Upload</legend>
+      <div>
+        <label for="csvFile">Upload CSV File</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv">
+      </div>
+      <div id="caret" style="cursor: pointer;">&#x25BC; Show/Hide Table</div>
+      <div id="preview">
+        <div id="tableContainer" style="display: none;"></div>
+      </div>
+
+    </fieldset>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+  <script>
+  document.getElementById('myForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+  });
+  
+  const select = document.getElementById("desired-profession");
+  const otherField = document.getElementById("other-profession-field");
+  
+  select.addEventListener("change", () => {
+    const selectedValues = Array.from(select.selectedOptions).map(option => option.value);
+    if (selectedValues.includes("other")) {
+      otherField.style.display = "block";
+    } else {
+      otherField.style.display = "none";
+    }
+  });
+  
+  document.getElementById("csvFile").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById("preview");
+  
+    if (file && file.type === "text/csv") {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const csvData = e.target.result;
+        const table = document.createElement("table");
+        table.classList.add("csv-preview");
+        const rows = csvData.split("\n");
+  
+        for (let i = 0; i < rows.length; i++) {
+          const row = document.createElement("tr");
+          const cells = rows[i].split(",");
+  
+          for (let j = 0; j < cells.length; j++) {
+            const cell = document.createElement(i === 0 ? "th" : "td");
+            cell.textContent = cells[j];
+            row.appendChild(cell);
+          }
+  
+          table.appendChild(row);
+        }
+  
+        const tableContainer = document.getElementById("tableContainer");
+        tableContainer.innerHTML = "";
+        tableContainer.appendChild(table);
+      };
+  
+      reader.readAsText(file);
+    } else {
+      preview.innerHTML = "Please upload a valid CSV file.";
+    }
+  });
+  
+  document.getElementById("caret").addEventListener("click", function () {
+    const tableContainer = document.getElementById("tableContainer");
+    const display = tableContainer.style.display;
+  
+    if (display === "none") {
+      tableContainer.style.display = "block";
+      this.innerHTML = "&#x25B2; Show/Hide Table";
+    } else {
+      tableContainer.style.display = "none";
+      this.innerHTML = "&#x25BC; Show/Hide Table";
+    }
+  });
+  
+  const form = document.getElementById('myForm');
+  
+  const fileInput = document.getElementById("csvFile");
+  
+  let fileContents;
+  fileInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      fileContents = event.target.result;
+      // Include fileContents in the JSON payload
+    };
+  
+    reader.readAsText(file);
+  });
+  
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+  
+    const payload = {
+           "recruiterFirstName": document.getElementById("first-name").value,
+          "recruiterLastName": document.getElementById("last-name").value,
+          "recruiterEmail": document.getElementById("email").value,
+          "campaignName": document.getElementById("name-of-campaign").value,
+          "jobType": document.getElementById("job-type").value,
+          "campaignType": document.getElementById("campaign-type").value,
+          "city": document.getElementById("city").value,
+          "state": document.getElementById("state").value,
+          "desiredProfession": Array.from(
+            document.getElementById("desired-profession").selectedOptions
+          ).map((option) => option.value),
+          "otherProfession": document.getElementById("other-profession").value,
+          "specialty": document.getElementById("specialty").value,
+          "maxStipendRate": document.getElementById("max-stipend-rate").value,
+          "payPerStipend": document.getElementById("pay-per-stipend").value,
+          "maxHourlyRate": document.getElementById("max-hourly-rate").value,
+          "payPerHourly": document.getElementById("pay-per-hourly").value,
+      "fileContents": fileContents,
+    };
+  
+    const formData = new FormData();
+    formData.append('payload', JSON.stringify(payload));
+    formData.append('attachment', form.elements['csvFile'].files[0]);
+  
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    });
+  
+    if (response.ok) {
+      function redirectToUrl(url) {
+        window.location.href = url;
+      }
+      redirectToUrl('https://www.nursebee.com/client-thank-you');
+    } else {
+      console.error('Error submitting the form:', response.statusText);
+    }
+  });
+      </script>
+   </body>
+</html>
